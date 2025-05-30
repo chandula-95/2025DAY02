@@ -24,5 +24,8 @@ public class Main {
         Thread.sleep(300);
         driver.findElement(By.xpath("//span[text()='Search']")).click();
         Thread.sleep(3000);
+        driver.navigate().forward();
+        System.out.println("Go forword");
+        driver.navigate().refresh();
     }
 }
