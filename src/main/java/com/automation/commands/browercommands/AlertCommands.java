@@ -8,10 +8,11 @@ import org.openqa.selenium.WebDriver;
 public class AlertCommands {
 
     public static void main(String[] args) throws InterruptedException {
-        alertwithok();
+        //alertwithok();
+        alertwithokandCancel();
     }
 
-    public static void alertwithok() throws InterruptedException {
+   /* public static void alertwithok() throws InterruptedException {
         WebDriver driver = WebDriverManager.chromedriver().create();
         driver.manage().window().maximize();
         driver.get("https://demo.automationtesting.in/Alerts.html");
@@ -26,8 +27,30 @@ public class AlertCommands {
         alert.accept();
         Thread.sleep(3000);
 
+    }*/
+
+
+    public static void alertwithokandCancel() throws InterruptedException {
+        WebDriver driver = WebDriverManager.chromedriver().create();
+        driver.manage().window().maximize();
+        driver.get("https://demo.automationtesting.in/Alerts.html");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[text () = 'Alert with OK & Cancel ']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.cssSelector("[class='btn btn-primary']")).click(); // Fixed here
+        Thread.sleep(3000);
+        Alert alert = driver.switchTo().alert();
+        alert.dismiss();
+        System.out.println(driver.findElement(By.id("demo")).getText());
+       // alert.accept();
+
+
     }
+
+
 }
+
+
 
 
 //public class AlertCommands {
