@@ -11,7 +11,7 @@ public class TestNGAnnotationOrder {
         System.out.println("beforeTest");
     }
 
-    @BeforeTest
+    @BeforeClass
     public void beforeClass(){
         System.out.println(" beforeClass");
     }
@@ -21,26 +21,34 @@ public class TestNGAnnotationOrder {
     }
 @Test
     public void testMethod1(){
-        System.out.println("beforeMethod");
+        System.out.println("testMethod1");
+    }
+
+
+
+    @Test
+    public void testMethod2(){
+        System.out.println("testMethod2");
     }
 
     @AfterMethod
-    public void AfterMethod(){
+    public void afterMethod(){
         System.out.println("AfterMethod");
     }
-@AfterSuite
-    public void AfterSuit(){
-        System.out.println("AfterSuit");
+
+    @AfterClass
+    public void afterClass(){
+        System.out.println("AfterClass");
+    }
+    @AfterTest
+    public void afterTest(){
+        System.out.println("AfterTest");
     }
 
-    @AfterTest
-    public void AfterTest(){
-        System.out.println("beforeTest");
+    @AfterSuite
+    public void afterSuite(){
+        System.out.println(" AfterSuite");
     }
 
-    @AfterTest
-    public void AfterClass(){
-        System.out.println(" AfterClass");
-    }
 
 }
