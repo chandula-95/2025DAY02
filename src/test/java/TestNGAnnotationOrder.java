@@ -31,6 +31,11 @@ public class TestNGAnnotationOrder {
         System.out.println("testMethod2");
     }
 
+    @Test
+    public void testMethod3(){
+        System.out.println("testMethod3");
+    }
+
     @AfterMethod
     public void afterMethod(){
         System.out.println("AfterMethod");
