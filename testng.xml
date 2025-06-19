@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" parallel="methods" thread-count="5"
+          name="E:/Automation/day2/script1/src/test/java/ParalleEx.java">
+
+        <classes>
+        <class name="ParalleEx">
+            <methods>
+                <include name="method1"/>
+                <include name="method2"/>
+                <include name="method3"/>
+                <include name="method4"/>
+                <include name="method5"/>
+            </methods>
+
+        </class>
+        </classes>
+    </test>
+</suite>
