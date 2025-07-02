@@ -1,0 +1,32 @@
+import org.testng.annotations.Test;
+
+public class PriorityEx {
+
+    @Test (priority = 1)
+    public void method1(){
+        System.out.println("method1");
+    }
+    @Test (priority = 2)
+    public void method2(){
+        System.out.println("method2");
+    }
+    @Test (priority = 3)
+    public void method3(){
+        System.out.println("method3");
+    }
+    @Test (priority = 4)
+    public void method4(){
+        System.out.println("method4");
+    }
+    @Test (priority = 0)
+    public void method0(){
+        System.out.println("method0");
+    }
+
+    @Test
+    public void method(){
+        System.out.println("method");
+    }
+
+
+}
