@@ -28,5 +28,10 @@ public class PriorityEx {
         System.out.println("method");
     }
 
+    @Test  (priority = -1)
+    public void method6(){
+        System.out.println("method6");
+    }
+
 
 }
