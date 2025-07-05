@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/Automation/day2/script1/src/test/java/combinedEx.java">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+                <include name="regression"/>       </run>
+        </groups>
+        <classes  >
+            <class name="combinedEx"></class>
+        </classes>
+    </test>
+</suite>
