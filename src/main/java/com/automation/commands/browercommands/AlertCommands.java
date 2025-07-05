@@ -9,7 +9,8 @@ public class AlertCommands {
 
     public static void main(String[] args) throws InterruptedException {
         //alertwithok();
-        alertwithokandCancel();
+        //alertwithokandCancel();
+        alertwithTextBox();
     }
 
    /* public static void alertwithok() throws InterruptedException {
@@ -46,6 +47,27 @@ public class AlertCommands {
 
 
     }
+
+    public static void alertwithTextBox() throws InterruptedException {
+        WebDriver driver = WebDriverManager.chromedriver().create();
+        driver.manage().window().maximize();
+        driver.get("https://demo.automationtesting.in/Alerts.html");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[text () ='Alert with Textbox ']")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.cssSelector("[class='btn btn-info']")).click();
+
+        Alert alert = driver.switchTo().alert();
+        System.out.println(alert.getText());
+        alert.sendKeys("hello");
+        alert.accept();
+        System.out.println(driver.findElement(By.id("demo1")).getText());
+
+
+    }
+
+
 
 
 }
